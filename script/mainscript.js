@@ -27,7 +27,7 @@ while(listOfNumbers.length < randomNumbers) {
     }
 }
 
-
+console.log(randNum);
 
 
 
@@ -39,7 +39,7 @@ while(listOfNumbers.length < randomNumbers) {
 
 
     // End doc ready
-})
+});
 
 
 
