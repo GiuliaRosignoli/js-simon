@@ -16,6 +16,10 @@ $(document).ready(function(){
  var randomNumbers = 5; // I need 5 random numbers
  var listOfNumbers = []; //collection of my random numbers
  var userChoice = 0; // Number chosen by the user
+ var listUserNumbers = [];
+ var arrUserNumbers = [];
+ var correctNumbers = [];
+ var wrongNumbers = [];
 
     // Numbers generations - 5 unique random numbers
 
@@ -31,22 +35,34 @@ while(listOfNumbers.length < randomNumbers) {
 alert(listOfNumbers);// List of random numbers
 
 
+
 setTimeout(function(){ 
-   
+    var i = 0; 
+    
+    while(i < 5){ // Ask the user for 5 numbers
+
+       var user = parseInt(prompt("Please insert the numbers you do remember") )
+        
+
+        while(arrUserNumbers.includes(user)){ //If the number inserted has already been inserted
+            user = parseInt(prompt("You have already inserted this number. Please choose another one."))
+        } // otherwise push it in the user variable
+        arrUserNumbers.push(user);
+        i++; //counter
+    };
+    console.log(arrUserNumbers);
+
+    for(i = 0; i < arrUserNumbers; i++) { //Check each number
+        if(listOfNumbers.includes(arrUserNumbers[i])){
+            correctNumbers.push(arrUserNumbers[i]);
+
+        } else {
+            wrongNumbers.push(arrUserNumbers[i]);
+        }
+    }
+    console.log("The correct numbers you've inserted are: "+ correctNumbers);
+    console.log("The wrong numbers you've inserted are: " + wrongNumbers);
 }, 9000 );
-
-// Ask the user for the 5 numbers
-var user = 0; 
-while(user < 5){
-    user = parseInt(prompt("Please insert the numbers you do remember") )
-    user++;
-};
-
-
-
-
-
-
 
 
 
