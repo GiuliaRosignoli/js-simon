@@ -22,12 +22,25 @@ $(document).ready(function(){
 while(listOfNumbers.length < randomNumbers) {
     var number =  randNum(rangeNumbers);   //function to generate a random number
 
-    if(! listOfNumbers.includes(randNum)) {
-        listOfNumbers.push(randNum);
+    if(! listOfNumbers.includes(number)) {
+        listOfNumbers.push(number);
     }
 }
 
-console.log(randNum);
+//console.log(listOfNumbers);
+alert(listOfNumbers);// List of random numbers
+
+
+setTimeout(function(){ 
+   
+}, 9000 );
+
+// Ask the user for the 5 numbers
+var user = 0 
+while(user < 5){
+    user = parseInt(prompt("Please insert the numbers you do remember") )
+    user++;
+};
 
 
 
@@ -49,4 +62,4 @@ console.log(randNum);
   
 function randNum(max){
      return Math.floor(Math.random()* max) + 1;
-  }
+  };
