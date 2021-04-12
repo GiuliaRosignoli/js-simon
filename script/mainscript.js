@@ -36,7 +36,7 @@ setTimeout(function(){
 }, 9000 );
 
 // Ask the user for the 5 numbers
-var user = 0 
+var user = 0; 
 while(user < 5){
     user = parseInt(prompt("Please insert the numbers you do remember") )
     user++;
